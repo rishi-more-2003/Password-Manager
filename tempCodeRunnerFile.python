@@ -1,0 +1,5 @@
+from PIL import Image
+
+foo=Image.open('signup.png')
+foo=foo.resize((200,200),Image.ANTIALIAS)
+foo.save("signup2.jpg",quality=95)
