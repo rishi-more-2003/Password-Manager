@@ -255,10 +255,12 @@ class Login:
         password = self.pass_tf.get()
         with open('data.json', 'r') as file:
             data = json.load(file)
-            if user_name in data:
-                if password == decrypt(data[user_name]['password']):
-                    self.window.destroy()
-                    MainWindow(user_name)
+            if (
+                user_name in data
+                and password == decrypt(data[user_name]['password'])
+            ):
+                self.window.destroy()
+                MainWindow(user_name)
 
     def signup(self):
         self.window.destroy()
