@@ -3,7 +3,6 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
-from PIL import Image
 
 def encrypt(message):
     key = 3
